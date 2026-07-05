@@ -1,1 +1,134 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دليل العلامة التجارية - البيان</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0b5cff; /* أزرق رئيسي */
+      --accent:#ff7a00;  /* برتقالي */
+      --neutral-dark:#222;
+      --neutral:#646464;
+      --bg:#f8f9fb;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Cairo',system-ui,Arial;color:var(--neutral-dark);background:var(--bg);margin:0;}
+    .container{max-width:1000px;margin:32px auto;padding:24px;background:#fff;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:72px;height:72px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
+    h1{margin:0;font-size:20px}
+    p.lead{color:var(--neutral);margin-top:6px}
 
+    .section{margin-top:22px}
+    .swatches{display:flex;gap:12px;flex-wrap:wrap}
+    .swatch{width:140px;padding:12px;border-radius:8px;color:#fff;display:flex;flex-direction:column;gap:8px}
+    .swatch small{opacity:.9}
+
+    .typography{display:flex;gap:20px;flex-wrap:wrap}
+    .type-sample{flex:1;min-width:220px;background:#fafbfd;padding:14px;border-radius:8px}
+    .type-sample h3{margin:0 0 8px 0}
+    .usage-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+    .usage-list li{background:#fff;padding:10px;border-radius:8px;border:1px solid #f0f0f0}
+
+    .download{margin-top:12px}
+    .btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
+
+    footer{margin-top:26px;color:var(--neutral);font-size:13px}
+
+    @media (max-width:600px){.container{margin:12px;padding:16px}}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">البيان</div>
+      <div>
+        <h1>دليل الهوية البصرية — شركة البيان</h1>
+        <p class="lead">مختصر قواعد استخدام الشعار، الألوان، والطباعة لضمان تناسق الهوية عبر جميع القنوات.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>الشعار</h2>
+      <p>استخدم الشعار بأشكاله الرسمية فقط. يجب الحفاظ على مساحة فارغة حول الشعار تساوي ارتفاع الحرف الأول في الشعار تقريبًا.</p>
+      <div style="display:flex;gap:16px;align-items:center;margin-top:12px;flex-wrap:wrap">
+        <div style="width:220px;background:#f6f8ff;padding:14px;border-radius:8px;border:1px dashed #e6ecff;text-align:center">
+          <div style="width:160px;height:56px;margin:0 auto;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">شعار</div>
+          <small style="display:block;margin-top:8px;color:var(--neutral)">الإصدار الملون</small>
+        </div>
+        <div style="width:220px;background:#fff;padding:14px;border-radius:8px;border:1px solid #f0f0f0;text-align:center">
+          <div style="width:160px;height:56px;margin:0 auto;background:#222;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">شعار</div>
+          <small style="display:block;margin-top:8px;color:var(--neutral)">نسخة على خلفية داكنة</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>الألوان الأساسية</h2>
+      <p>الألوان الرئيسية التي تمثل العلامة التجارية. استخدمها للأزرار، الروابط، والعناصر البارزة.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:var(--primary)">
+          <strong>#0b5cff</strong>
+          <small>Primary — أزرق البيان</small>
+        </div>
+        <div class="swatch" style="background:var(--accent)">
+          <strong>#ff7a00</strong>
+          <small>Accent — برتقالي</small>
+        </div>
+        <div class="swatch" style="background:#1f2937">
+          <strong>#1f2937</strong>
+          <small>Dark — نص وواجهات</small>
+        </div>
+        <div class="swatch" style="background:#f3f4f6;color:#222">
+          <strong style="color:var(--neutral-dark)">#f3f4f6</strong>
+          <small style="color:var(--neutral)">Neutral — خلفيات</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>الطباعة</h2>
+      <p>الخط الافتراضي: Cairo (وزن 300 — 700). إرشادات الاستخدام:</p>
+      <ul class="usage-list">
+        <li><strong>العناوين:</strong> Cairo 600-700, حجم 18-28px</li>
+        <li><strong>النص الرئيسي:</strong> Cairo 300-400, حجم 14-16px, تباعد سطري 1.6</li>
+        <li><strong>الأزرار:</strong> Cairo 600, حجم 14px</li>
+        <li><strong>أمثلة:</strong> استخدم وزن أقوى للعناوين لإبراز المحتوى، ووزن أخف للنصوص الطويلة.</li>
+      </ul>
+
+      <div class="typography" style="margin-top:12px">
+        <div class="type-sample">
+          <h3 style="font-weight:700">عنوان 32px — مثال على العناوين</h3>
+          <p style="font-size:16px">هذا نص تجريبي يعرض كيف تبدو الفقرة باستخدام خط Cairo. الهدف هو الحفاظ على قراءة سهلة ووضوح عبر جميع الأجهزة.</p>
+        </div>
+        <div class="type-sample">
+          <h3 style="font-weight:600">زر CTA</h3>
+          <a class="btn" href="#">اتصل بنا</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>إرشادات سريعة للاستخدام</h2>
+      <ol>
+        <li>لا تغير نسب الشعار أو تلوينه بألوان غير معتمدة.</li>
+        <li>حافظ على تباين كافٍ بين النص والخلفية لضمان الوصول.</li>
+        <li>استخدم الألوان الأساسية للعناصر التفاعلية فقط.</li>
+      </ol>
+
+      <div class="download">
+        <p>تحميل الأصول:</p>
+        <a class="btn" href="#">تحميل الشعار (SVG)</a>
+        <span style="margin-inline-start:8px;color:var(--neutral)">or</span>
+        <a class="btn" style="background:var(--accent)" href="#">تحميل دليل كامل (PDF)</a>
+      </div>
+    </section>
+
+    <footer>
+      تم إنشاء هذا الملف تلقائيًا لبدء صفحة الهوية البصرية. عدّل المحتوى أو أضف الأصول حسب الحاجة.
+    </footer>
+  </main>
+</body>
+</html>
