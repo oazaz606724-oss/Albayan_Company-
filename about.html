@@ -1,1 +1,947 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن شركة البيان - Albayan Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        section {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        section h2 i {
+            color: #764ba2;
+        }
+
+        /* من نحن */
+        .about-intro p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* الرؤية والمهمة */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .mission-vision div {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border-right: 5px solid #667eea;
+        }
+
+        .mission-vision h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .mission-vision p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* القيم الأساسية */
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid #667eea;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .value-item i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .value-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .value-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* الخدمات */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-left: 5px solid #764ba2;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* الفريق */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            border-color: #667eea;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #667eea;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            color: #667eea;
+            margin: 1rem 0 0.3rem;
+            font-size: 1.3rem;
+        }
+
+        .team-member .position {
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .team-member .social {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .team-member .social a {
+            color: #667eea;
+            transition: all 0.3s;
+        }
+
+        .team-member .social a:hover {
+            color: #764ba2;
+            transform: scale(1.3);
+        }
+
+        /* الإنجازات */
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .achievement-item:hover {
+            transform: scale(1.05);
+        }
+
+        .achievement-item h3 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* الشهادات والجوائز */
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-card i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* العملاء */
+        .clients {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .client-logo {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            text-align: center;
+            width: 100%;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .client-logo i {
+            font-size: 2.5rem;
+            color: #667eea;
+        }
+
+        .client-logo p {
+            color: #666;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* التواصل */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a,
+        .contact-item p {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #764ba2;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            box-shadow: 0 -2px 15px rgba(0,0,0,0.2);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        footer .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        footer .social-links a:hover {
+            color: #667eea;
+            transform: scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            z-index: 99;
+            transition: all 0.3s;
+        }
+
+        .scroll-top:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+
+        .scroll-top.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1><i class="fas fa-building"></i> شركة البيان</h1>
+        <p>الابتكار والجودة في كل خطوة</p>
+    </header>
+
+    <!-- Navigation -->
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                <li><a href="#mission"><i class="fas fa-bullseye"></i> الرؤية والمهمة</a></li>
+                <li><a href="#values"><i class="fas fa-heart"></i> القيم</a></li>
+                <li><a href="#services"><i class="fas fa-cogs"></i> الخدمات</a></li>
+                <li><a href="#team"><i class="fas fa-users"></i> الفريق</a></li>
+                <li><a href="#achievements"><i class="fas fa-trophy"></i> الإنجازات</a></li>
+                <li><a href="#certifications"><i class="fas fa-certificate"></i> الشهادات</a></li>
+                <li><a href="#clients"><i class="fas fa-handshake"></i> العملاء</a></li>
+                <li><a href="#contact"><i class="fas fa-phone"></i> التواصل</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- من نحن -->
+        <section id="about">
+            <h2><i class="fas fa-building"></i> من نحن</h2>
+            <div class="about-intro">
+                <p>
+                    شركة البيان هي شركة متخصصة في تقديم حلول متطورة وخدمات عالية الجودة لمختلف القطاعات. 
+                    نؤمن بأهمية الابتكار والتطوير المستمر لتحقيق احتياجات عملائنا وتجاوز توقعاتهم.
+                </p>
+                <p>
+                    منذ تأسيسنا، عملنا على بناء سمعة قوية من خلال الالتزام بالجودة والمهنية والشفافية 
+                    في جميع مشاريعنا. فريقنا المتخصص يعمل بكل اجتهاد لضمان رضا العملاء.
+                </p>
+                <p>
+                    نسعى دائماً لتقديم حلول مخصصة تناسب احتياجات كل عميل، مع الحرص على الابتكار المستمر 
+                    والتطور التكنولوجي.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <h3>15+</h3>
+                    <p>سنة من الخبرة</p>
+                </div>
+                <div class="stat-card">
+                    <h3>500+</h3>
+                    <p>عميل راضٍ</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1000+</h3>
+                    <p>مشروع منجز</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>جوائز وتكريمات</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الرؤية والمهمة -->
+        <section id="mission">
+            <h2><i class="fas fa-bullseye"></i> رؤيتنا ومهمتنا</h2>
+            <div class="mission-vision">
+                <div>
+                    <h3><i class="fas fa-eye"></i> رؤيتنا</h3>
+                    <p>
+                        أن نكون الشركة الرائدة والموثوقة في تقديم حلول مبتكرة وخدمات متميزة تلبي احتياجات السوق العربي 
+                        وتحقق تطلعات عملائنا وشركائنا. نسعى لأن نكون مرجعاً موثوقاً في مجالاتنا.
+                    </p>
+                </div>
+                <div>
+                    <h3><i class="fas fa-tasks"></i> مهمتنا</h3>
+                    <p>
+                        تقديم خدمات متميزة وحلول عملية مخصصة تساهم بشكل فعّال في نجاح أعمال عملائنا وتحقيق 
+                        أهدافهم. نلتزم بالجودة العالية والابتكار المستمر والخدمة المتفانية.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- القيم الأساسية -->
+        <section id="values">
+            <h2><i class="fas fa-heart"></i> قيمنا الأساسية</h2>
+            <div class="values">
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>الأمانة والشفافية</h3>
+                    <p>نلتزم بأعلى معايير النزاهة والشفافية في التعامل مع جميع أطرافنا</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>الابتكار</h3>
+                    <p>نسعى باستمرار لتطوير حلول جديدة ومبتكرة تواكب تطورات السوق</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-star"></i>
+                    <h3>الجودة</h3>
+                    <p>نركز على تقديم أفضل جودة في كل ما نقدمه من منتجات وخدمات</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-trophy"></i>
+                    <h3>التميز</h3>
+                    <p>نهدف للتفوق والتميز في جميع أعمالنا وعملياتنا</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>العمل الجماعي</h3>
+                    <p>نؤمن بقوة العمل الفريقي والتعاون المثمر بين أعضاء فريقنا</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>المسؤولية الاجتماعية</h3>
+                    <p>نلتزم بتحمل مسؤوليتنا تجاه المجتمع والبيئة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الخدمات -->
+        <section id="services">
+            <h2><i class="fas fa-cogs"></i> خدماتنا</h2>
+            <div class="services">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>تطوير البرمجيات</h3>
+                    <p>حلول برمجية مخصصة وتطبيقات ويب وموبايل بأحدث التقنيات والمعايير العالمية</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>استشارات الأعمال</h3>
+                    <p>استشارات احترافية لتطوير استراتيجيات العمل وزيادة الكفاءة والربحية</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>إدارة البيانات</h3>
+                    <p>حلول متقدمة لإدارة وتحليل البيانات واستخراج الرؤى القيمة</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>الأمن السيبراني</h3>
+                    <p>خدمات حماية شاملة ضد التهديدات الرقمية وضمان أمان البيانات</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>الحلول السحابية</h3>
+                    <p>حلول سحابية موثوقة وآمنة تدعم نمو عملك وتقلل التكاليس</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>الدعم الفني</h3>
+                    <p>دعم فني متخصص وسريع متاح 24/7 لحل جميع المشاكل التقنية</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الفريق -->
+        <section id="team">
+            <h2><i class="fas fa-users"></i> فريق العمل</h2>
+            <div class="team">
+                <div class="team-member">
+                    <i class="fas fa-user-circle" style="font-size: 120px; color: #667eea;"></i>
+                    <h3>أحمد محمد</h3>
+                    <p class="position">المدير التنفيذي والمؤسس</p>
+                    <p>خبرة 15 سنة في مجال الإدارة والتطوير الاستراتيجي</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <i class="fas fa-user-circle" style="font-size: 120px; color: #764ba2;"></i>
+                    <h3>فاطمة علي</h3>
+                    <p class="position">مدير التطوير والابتكار</p>
+                    <p>متخصصة في تطوير الحلول البرمجية المتقدمة والتقنيات الحديثة</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <i class="fas fa-user-circle" style="font-size: 120px; color: #667eea;"></i>
+                    <h3>محمود حسن</h3>
+                    <p class="position">مدير التسويق والعلاقات</p>
+                    <p>خبرة واسعة في بناء العلاقات القوية مع العملاء والشركاء</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <i class="fas fa-user-circle" style="font-size: 120px; color: #764ba2;"></i>
+                    <h3>نور الدين حسني</h3>
+                    <p class="position">مدير العمليات والمشاريع</p>
+                    <p>متخصص في إدارة المشاريع المعقدة وضمان تحقيق الأهداف بكفاءة</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الإنجازات -->
+        <section id="achievements">
+            <h2><i class="fas fa-trophy"></i> إنجازاتنا وإحصائياتنا</h2>
+            <div class="achievements">
+                <div class="achievement-item">
+                    <h3>15+</h3>
+                    <p>سنة من التميز</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>500+</h3>
+                    <p>عميل عالمي</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>1000+</h3>
+                    <p>مشروع منفذ</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>50+</h3>
+                    <p>جائزة وتكريم</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>99%</h3>
+                    <p>معدل رضا العملاء</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>24/7</h3>
+                    <p>دعم فني متواصل</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الشهادات والجوائز -->
+        <section id="certifications">
+            <h2><i class="fas fa-certificate"></i> الشهادات والجوائز</h2>
+            <div class="certifications">
+                <div class="cert-card">
+                    <i class="fas fa-star"></i>
+                    <h3>ISO 9001:2015</h3>
+                    <p>شهادة إدارة الجودة الدولية</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>ISO 27001</h3>
+                    <p>شهادة أمان وحماية المعلومات</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>جائزة أفضل شركة</h3>
+                    <p>لعام 2023 - فئة التكنولوجيا</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award"></i>
+                    <h3>الشهادة الذهبية</h3>
+                    <p>من اتحاد الشركات العربية</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>جائزة الابتكار</h3>
+                    <p>لأفضل حل برمجي - 2023</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h3>أفضل خدمة عملاء</h3>
+                    <p>اختيار العملاء 3 سنوات متتالية</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- العملاء -->
+        <section id="clients">
+            <h2><i class="fas fa-handshake"></i> عملاؤنا الموثوقون</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">
+                نفخر بالعمل مع عدد من الشركات الرائدة والمؤسسات الموثوقة
+            </p>
+            <div class="clients">
+                <div class="client-logo">
+                    <i class="fas fa-building"></i>
+                    <p>الشركة الأولى</p>
+                </div>
+                <div class="client-logo">
+                    <i class="fas fa-industry"></i>
+                    <p>الشركة الثانية</p>
+                </div>
+                <div class="client-logo">
+                    <i class="fas fa-store"></i>
+                    <p>الشركة الثالثة</p>
+                </div>
+                <div class="client-logo">
+                    <i class="fas fa-bank"></i>
+                    <p>الشركة الرابعة</p>
+                </div>
+                <div class="client-logo">
+                    <i class="fas fa-hospital"></i>
+                    <p>الشركة الخامسة</p>
+                </div>
+                <div class="client-logo">
+                    <i class="fas fa-school"></i>
+                    <p>الشركة السادسة</p>
+                </div>
+                <div class="client-logo">
+                    <i class="fas fa-utensils"></i>
+                    <p>الشركة السابعة</p>
+                </div>
+                <div class="client-logo">
+                    <i class="fas fa-car"></i>
+                    <p>الشركة الثامنة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- التواصل -->
+        <section id="contact">
+            <h2><i class="fas fa-phone"></i> تواصل معنا</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">
+                نحن هنا للإجابة على استفساراتك وتقديم الحلول المناسبة لاحتياجاتك
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>العنوان</h3>
+                    <p>الرياض، المملكة العربية السعودية</p>
+                    <p>شارع الملك فهد، البرج الأول</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>الهاتف</h3>
+                    <a href="tel:+966123456789">+966 12 345 6789</a><br>
+                    <a href="tel:+966123456790">+966 12 345 6790</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>البريد الإلكتروني</h3>
+                    <a href="mailto:info@albayan.com">info@albayan.com</a><br>
+                    <a href="mailto:support@albayan.com">support@albayan.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>ساعات العمل</h3>
+                    <p>السبت - الخميس: 9:00 - 18:00</p>
+                    <p>الجمعة: مغلق</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 شركة البيان. جميع الحقوق محفوظة.</p>
+        <p>تصميم وتطوير بواسطة <strong>فريق البيان المتخصص</strong></p>
+        <div class="social-links">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scroll Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Scroll to top button
+        const scrollTop = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
