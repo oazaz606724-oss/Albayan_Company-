@@ -1,1 +1,351 @@
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - شركة الباين</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info h2,
+        .contact-form h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .contact-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-item h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Arial', sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #764ba2;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error-message {
+            display: none;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>تواصل معنا</h1>
+        <p>نحن هنا لخدمتك</p>
+    </header>
+    
+    <div class="container">
+        <div class="contact-wrapper">
+            <!-- معلومات التواصل -->
+            <div class="contact-info">
+                <h2>معلومات الاتصال</h2>
+                
+                <div class="contact-item">
+                    <h3>📍 العنوان</h3>
+                    <p>الرياض، المملكة العربية السعودية</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>📞 الهاتف</h3>
+                    <p><a href="tel:+966501234567" style="color: #667eea; text-decoration: none;">+966 50 123 4567</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>📧 البريد الإلكتروني</h3>
+                    <p><a href="mailto:info@albayan.com" style="color: #667eea; text-decoration: none;">info@albayan.com</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>🕐 ساعات العمل</h3>
+                    <p>السبت - الخميس: 9:00 صباحاً - 6:00 مساءً<br>
+                       الجمعة: مغلق</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>تابعنا على وسائل التواصل</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+                        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+                        <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- نموذج التواصل -->
+            <div class="contact-form">
+                <h2>أرسل لنا رسالة</h2>
+                
+                <div id="successMessage" class="success-message">
+                    تم إرسال رسالتك بنجاح! سنرد عليك في أقرب وقت.
+                </div>
+                
+                <div id="errorMessage" class="error-message">
+                    حدث خطأ أثناء إرسال الرسالة. حاول مرة أخرى.
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">الموضوع *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">الرسالة *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 شركة الباين. جميع الحقوق محفوظة.</p>
+    </footer>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // جمع بيانات النموذج
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // التحقق من الحقول المطلوبة
+            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                showError('يرجى ملء جميع الحقول المطلوبة');
+                return;
+            }
+            
+            // التحقق من صيغة البريد الإلكتروني
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                showError('يرجى إدخال بريد إلكتروني صحيح');
+                return;
+            }
+            
+            // هنا يمكنك إرسال البيانات إلى الخادم
+            console.log('بيانات النموذج:', formData);
+            
+            // محاكاة الإرسال
+            setTimeout(() => {
+                showSuccess();
+                document.getElementById('contactForm').reset();
+            }, 1000);
+        });
+        
+        function showSuccess() {
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            errorMsg.style.display = 'none';
+            successMsg.style.display = 'block';
+            
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        }
+        
+        function showError(message) {
+            const errorMsg = document.getElementById('errorMessage');
+            const successMsg = document.getElementById('successMessage');
+            
+            errorMsg.textContent = message;
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'block';
+            
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
